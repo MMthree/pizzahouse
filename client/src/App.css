@@ -1,33 +1,55 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif; 
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.nav-divider {
+  background-color: black;
+  width: 100%;
+  height: 45px;
+  color: rgb(226, 226, 226);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.nav-divider p {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 9px 0;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-divider p:nth-child(2) {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 11px 0;
+  color: #F8E080;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.divider-lower {
+  background-color: #F8E080;
+  width: 100%;
+  height: 2px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.671), 0 6px 20px 0 rgba(0, 0, 0, 0.445)
 }
+
+.deals_card {
+  border: 1px solid black;
+  margin: 10px 0px;
+}
+
+.popover {
+  position: absolute;
+  top: 8px !important;
+  left: 60px !important;
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.356), 0 6px 20px 0 rgba(0, 0, 0, 0.445)
+}
+
+.deal_image {
+  height: 150px;
+}
+
+.deals_btn {
+  margin-top: 110px;
+}
+

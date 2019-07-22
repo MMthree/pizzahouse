@@ -1,19 +1,28 @@
 import React from 'react';
-import SidebarMenu from "./components/SidebarMenu";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import AppNavbar from "./components/AppNavbar";
+import NavDivider from "./components/NavDivider";
+
+// Pages
+import home from "./pages/home";
+import deals from "./pages/deals";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
 
 
 function App() {
   return (
-    <div className="App">
-      <div id="outer-container">
-        <SidebarMenu pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" } />
-        <main id="page-wrap">
-          .
-          .
-          .
-        </main>
+    <div>
+      <AppNavbar />
+      <NavDivider />
+      <div className="container">
+        <Router>
+          <Switch>
+            <Route exact path="/" component={home} />      
+            <Route exact path="/deals" component={deals} />
+          </Switch>
+        </Router>
       </div>
     </div>
   );
