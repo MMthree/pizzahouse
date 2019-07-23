@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const SideNav = ({ toggle }) => {
 
@@ -20,7 +20,6 @@ const SideNav = ({ toggle }) => {
 
     const [policyToggle, setPolicyToggle] = useState(false);
     const [policyList] = useState([
-        { name: "Privacy Policy", path: "/privacy-policy" },
         { name: "Terms Of Use", path: "/terms-of-use" }
     ])
 
@@ -45,13 +44,14 @@ const SideNav = ({ toggle }) => {
 
 
     return (
-        <BrowserRouter>
             <div className={`side-nav ${toggleActive}`}>
                 <div className="sidenav-links">
                     <div className="sidenav-top">
                         Sign up
                     </div>
-                    <p><Link to="/deals">Deals</Link></p>
+                    <Link to="/deals">
+                        <p>Deals</p>
+                    </Link>
                     <p 
                         onClick={expandList} 
                         id="MENU"
@@ -62,9 +62,7 @@ const SideNav = ({ toggle }) => {
                         {!menuToggle ? null : 
                             menuList.map((list, i) => (
                                 <div key={i} className="sidenav-expanded">
-                                    <Link to={list.path}>
-                                        <p>{list.name}</p>
-                                    </Link>
+                                    <Link to={list.path}><p>{list.name}</p></Link>
                                 </div>
                             ))
                         }
@@ -79,9 +77,7 @@ const SideNav = ({ toggle }) => {
                     {!customerToggle ? null : 
                             customerList.map((list, i) => (
                                 <div key={i} className="sidenav-expanded">
-                                    <Link to={list.path}>
-                                        <p>{list.name}</p>
-                                    </Link>
+                                    <Link to={list.path}><p>{list.name}</p></Link>
                                 </div>
                             ))
                         }
@@ -96,15 +92,12 @@ const SideNav = ({ toggle }) => {
                     {!policyToggle ? null : 
                             policyList.map((list, i) => (
                                 <div key={i} className="sidenav-expanded">
-                                    <Link to={list.path}>
-                                        <p>{list.name}</p>
-                                    </Link>
+                                    <Link to={list.path}><p>{list.name}</p></Link>
                                 </div>
                             ))
                         }
                 </div>
             </div>
-        </BrowserRouter>
     )
 }
 
