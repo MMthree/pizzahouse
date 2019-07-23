@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import Deals from "../Deals.json";
 import DealsCard from "../components/DealsCard";
+import NutritionDisclaimer from "../components/NutritionDisclaimer";
 
 
 const deals = () => {
@@ -19,6 +20,9 @@ const deals = () => {
                        />
                    </Fragment>
                ))}
+           </div>
+           <div className="row">
+               <NutritionDisclaimer />
            </div>
         </div>
     )
