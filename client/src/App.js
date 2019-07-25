@@ -3,6 +3,9 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import AppNavbar from "./components/AppNavbar";
 import NavDivider from "./components/NavDivider";
 
+// Context
+import { ShoppingProvider } from "./context/ShoppingCartContext";
+
 // Pages
 import home from "./pages/home";
 import deals from "./pages/deals";
@@ -17,22 +20,24 @@ import './App.css';
 
 function App() {
   return (
-    <div>
-      <Router>
-        <AppNavbar />
-        <NavDivider />
-        <div className="container">
-          <Switch>
-            <Route exact path="/" component={home} />      
-            <Route exact path="/deals" component={deals} />
-            <Route exact path="/menu/:food" component={menu} />
-            <Route exact path="/contact" component={contactUs} />
-            <Route exact path="/faq" component={faq} />
-            <Route exact path="/terms-of-use" component={terms} />
-          </Switch>
-        </div>
-      </Router>
-    </div>
+    <ShoppingProvider>
+      <div>
+        <Router>
+          <AppNavbar />
+          <NavDivider />
+          <div className="container">
+            <Switch>
+              <Route exact path="/" component={home} />      
+              <Route exact path="/deals" component={deals} />
+              <Route exact path="/menu/:food" component={menu} />
+              <Route exact path="/contact" component={contactUs} />
+              <Route exact path="/faq" component={faq} />
+              <Route exact path="/terms-of-use" component={terms} />
+            </Switch>
+          </div>
+        </Router>
+      </div>
+    </ShoppingProvider>
   );
 }
 

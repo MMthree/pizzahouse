@@ -1,5 +1,7 @@
-import React,{ useState } from 'react';
+import React,{ useState, useContext } from 'react';
+import { Link } from "react-router-dom";
 import SideNav from "./SideNav";
+import { ShoppingCartContext } from "../context/ShoppingCartContext";
 
 import {  
     UncontrolledDropdown, 
@@ -10,6 +12,9 @@ import {
 
 
 const AppNavbar = () => {
+
+    const value = useContext(ShoppingCartContext);
+
     const [sideNavToggle, setSideNavToggle] = useState(false);
 
     const toggleSideNav = () => {
@@ -20,35 +25,39 @@ const AppNavbar = () => {
     
     return (
         <nav>
-            <ul className="nav-links">
-                <li>
+            <div className="nav-links">
+                
                     <UncontrolledDropdown setActiveFromChild>
-                        <DropdownToggle tag="a" className="nav-link" caret>
-                            Menu
+                        <DropdownToggle tag="a" className="" caret>
+                           Menu
                         </DropdownToggle>
                         <DropdownMenu>
-                            <DropdownItem tag="a" href="/menu/pizza">Pizza</DropdownItem>
-                            <DropdownItem tag="a" href="/menu/pizza">Pizza</DropdownItem>
-                            <DropdownItem tag="a" href="/menu/pizza">Pizza</DropdownItem>
+                            <Link to="/menu/pizza"><DropdownItem>Pizza</DropdownItem></Link>
+                            <Link to="/menu/wings"><DropdownItem>Wings</DropdownItem></Link>
+                            <Link to="/menu/sides"><DropdownItem>Sides</DropdownItem></Link>
+                            <Link to="/menu/desserts"><DropdownItem>Desserts</DropdownItem></Link>
+                            <Link to="/menu/drinks"><DropdownItem>Drinks</DropdownItem></Link>
                         </DropdownMenu>
                     </UncontrolledDropdown>
-                </li>
-                <li>Deals</li>
-            </ul>
+                
+                <Link to="/deals"><p className="">Deals</p></Link>
+            </div>
             <div className="logo">
-                <h4>Logo</h4>
+                <img src="./images/PH_logo.png" alt="logo" />
+                <img src="./images/PH_logo_min.png" alt="logo" />
             </div>
             <div className="your-store">
-                <ul>
-                    <li>YOUR STORE</li>
-                    <li>10072 Chapman Ave.</li>
-                </ul>
+                <p>Your Store</p>
+                <p>10072 Chapman Ave.</p>
             </div>
             <div className="cart">
-                <ul>
-                    <li>Icon</li>
-                    <li>$5.00</li>
-                </ul>
+                <div className="cart-icon">
+                    <i className="fas fa-shopping-cart"></i>
+                    <div className="cart-icon-count"><span>7</span></div>
+                </div>
+                
+                
+                <p>$5.00</p>
             </div>
             <div onClick={toggleSideNav} className={`burger ${burgerActive}`}>
                 <div className="line1"></div>
@@ -57,23 +66,6 @@ const AppNavbar = () => {
             </div>
             <SideNav toggle={sideNavToggle} />
         </nav>
-
-        
-        // <Navbar>
-        //     <Nav className="mr-auto" navbar>
-        //         <UncontrolledDropdown setActiveFromChild>
-        //             <DropdownToggle tag="a" className="nav-link" caret>
-        //                 Menu
-        //             </DropdownToggle>
-        //             <DropdownMenu>
-        //                 <DropdownItem tag="a" href="/deals">Deals</DropdownItem>
-        //             </DropdownMenu>
-        //         </UncontrolledDropdown>
-        //         <NavItem className="d-inline">
-        //             <NavLink href="/deals">Deals</NavLink>
-        //         </NavItem>
-        //     </Nav>
-        // </Navbar>
     )
 }
 
