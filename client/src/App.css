@@ -199,9 +199,22 @@ a:hover {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.671), 0 6px 20px 0 rgba(0, 0, 0, 0.445)
 }
 
+.menu-page-nav {
+  padding: 15px 10px;
+  margin: 30px 0 5px 0; 
+  border-top: 2px solid lightgray;
+  border-bottom: 2px solid lightgray;
+}
+
+.menu-page-nav span {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 3%;
+}
+
 .deals_card {
-  border: 1px solid black;
-  margin: 10px 0px;
+  border: 1px solid lightgray;
+  margin: 5px 5px;
 }
 
 .popover {
@@ -209,6 +222,24 @@ a:hover {
   top: 8px !important;
   left: 60px !important;
   box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.356), 0 6px 20px 0 rgba(0, 0, 0, 0.445)
+}
+
+.menu-size {
+  margin: 10px 0px;
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #555;
+}
+
+.menu-size:focus {
+  outline: none;
+}
+
+.cal-info p {
+  margin: 0px;
+  color: #555;
 }
 
 .deal_image {

@@ -1,9 +1,12 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
-import { UncontrolledPopover, PopoverBody } from 'reactstrap';
+import {  
+    UncontrolledPopover,
+    PopoverBody,
+} from 'reactstrap';
 
 
-const DealsCard = props => {
+const DessertsMenuCard = props => {
 
     const [popoverOpen, setPopoverOpen] = useState(false);
 
@@ -11,9 +14,11 @@ const DealsCard = props => {
         setPopoverOpen(!popoverOpen);
     };
 
-    const { id, name, price, description, image } = props;
+
+    const { id, name, description, image, price, cals } = props;
+
     return (
-        <div className="deals_card col-12 col-sm-12 col-md-5 mx-auto">
+        <div className="deals_card col-12 col-sm-12 col-md-6 mx-auto">
             
                <UncontrolledPopover trigger="legacy" placement="left-start" target={id}>
                     <PopoverBody placement="left" >
@@ -32,15 +37,26 @@ const DealsCard = props => {
             </div>
  
             <div className="row py-3">
-                <div className="col-7">
+                <div className="col-7 mt-auto">
+                    <select id="size" className="menu-size btn-block">
+                        <option value="small">Order</option>
+                    </select>
+                    <select id="amount" className="menu-size btn-block">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
                     <button className="deals_btn btn btn-danger btn-block">Add To Order</button>
                 </div>
-                <div className="col-5 text-center">
+                <div className="col-5 mt-auto cal-info text-center">
                     <img className="deal_image rounded-lg" alt={name} src={image} />
+                    <p>{cals}</p>
                 </div>
             </div>
         </div>
     )
 }
 
-export default DealsCard;
+export default DessertsMenuCard;

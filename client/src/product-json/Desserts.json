@@ -1,0 +1,18 @@
+[
+    {
+        "id": "des_cinnabon",
+        "name": "Cinnabon Rolls",
+        "price": 5.99,
+        "cals": "80 cals/roll",
+        "image": "/images/desserts/desserts_cinnabonrolls.png",
+        "description": "10 mini cinnamon rolls, topped with signature cream cheese frosting, are the perfect way to end pizza night."
+    },
+    {
+        "id": "des_cookie",
+        "name": "Chocolate Chip Cookie",
+        "price": 5.99,
+        "cals": "195 cals/piece",
+        "image": "/images/desserts/desserts_cookie.png",
+        "description": "A freshly-baked chocolate chip cookie."
+    }
+]

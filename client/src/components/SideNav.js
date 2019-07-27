@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 
-const SideNav = ({ toggle }) => {
+const SideNav = ({ closeSideNav ,toggle }) => {
 
     const [menuToggle, setMenuToggle] = useState(false);
     const [menuList] = useState([
@@ -61,7 +61,7 @@ const SideNav = ({ toggle }) => {
 
                         {!menuToggle ? null : 
                             menuList.map((list, i) => (
-                                <div key={i} className="sidenav-expanded">
+                                <div onClick={closeSideNav} key={i} className="sidenav-expanded">
                                     <Link to={list.path}><p>{list.name}</p></Link>
                                 </div>
                             ))

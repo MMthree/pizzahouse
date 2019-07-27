@@ -2,64 +2,56 @@
     {
         "id": "deal_1",
         "name": "Dinner Box",
-        "display_price": "$13.00",
-        "price": 1300, 
+        "price": 12.99, 
         "image": "./images/deals/DinnerBox.png",
-        "description": "Select which freshly prepared medium 1-topping pizza you want, and you'll also get five breadsticks with marinara dipping sauce, plus 10 cinnamon sticks with icing."
+        "description": "A medium 1-topping pizza, and you'll also get five breadsticks with marinara dipping sauce, plus 10 cinnamon sticks with icing."
     },
     {
         "id": "deal_2",
         "name": "Cheesy Bites Pizza",
-        "display_price": "$10.00",
-        "price": 1000, 
+        "price": 9.99, 
         "image": "./images/deals/CheesyBitesPizza.png",
         "description": "A large 1-topping pizza surrounded by 28 pull-able, pop-able cheese-filled bites. Served with marinara dipping sauce."
     },
     {
         "id": "deal_3",
         "name": "Heart Shaped Pizza",
-        "display_price": "$12.00",
-        "price": 1200, 
+        "price": 11.99, 
         "image": "./images/deals/Heart_Pizza.png",
-        "description": "Get a 1-topping Heart-Shaped Pizza. Available on Hand Tossed crust only. Additional charge for extra cheese, extra toppings and specialty pizzas."
+        "description": "Get a 1-topping Heart-Shaped Pizza to share with that special person."
     },
     {
         "id": "deal_4",
         "name": "Cinnabon Mini Rolls",
-        "display_price": "$7.00",
-        "price": 700, 
+        "price": 6.99, 
         "image": "./images/deals/CinnabonMiniRolls.png",
         "description": "10 mini cinnamon rolls, topped with signature cream cheese frosting, are the perfect way to end pizza night."
     },
     {
         "id": "deal_5",
         "name": "Breadsticks And A 2-Liter",
-        "display_price": "$8.00",
-        "price": 800, 
+        "price": 7.99, 
         "image": "./images/deals/BreadSticks_and_2l.png",
-        "description": "Breadsticks And a 2-Liter. Additional charge for Cheese Sticks."
+        "description": "Breadsticks And a 2-Liter soft drink."
     },
     {
         "id": "deal_6",
         "name": "Four 20oz. Pepsi Beverages",
-        "display_price": "$7.00",
-        "price": 700, 
+        "price": 6.99, 
         "image": "./images/deals/Pepsi4Pack.png",
         "description": "Four 20oz. Pepsi Beverages"
     },
     {
         "id": "deal_7",
         "name": "8 Bone-Out Wings And An Ultimate Chocolate Chip Cookie",
-        "display_price": "$13.00",
-        "price": 1300, 
+        "price": 12.99, 
         "image": "./images/deals/Wings_and_Cookie.png",
         "description": "8 Breaded Bone-Out Wings and an Ultimate Chocolate Chip Cookie"
     },
     {
         "id": "deal_8",
         "name": "8 Bone-Out Wings, Fries, And A 2 Liter",
-        "display_price": "$13.00",
-        "price": 1300, 
+        "price": 12.99, 
         "image": "./images/deals/Wings_Fries_2L.png",
         "description": "8 Breaded Bone-Out Wings, Fries, and a 2 Liter"
     }

@@ -1,0 +1,50 @@
+[   
+    {
+        "id": "p_pepporoni",
+        "name": "Pepporoni Pizza",
+        "medium": "Medium",
+        "med_price": 9.99,
+        "med_cals": "230 cal/slice",
+        "large": "Large",
+        "lar_price": 13.99,
+        "lar_cals": "310 cal/slice",
+        "image": "/images/pizzas/pizza_Pepperoni.png",
+        "description": "This gourmet pizza is ideal for easy late night delivery, complete with mozzarella cheese and pepperoni."
+    },
+    {
+        "id": "p_supreme",
+        "name": "Supreme Pizza",
+        "medium": "Medium",
+        "med_price": 9.99,
+        "med_cals": "240 cal/slice",
+        "large": "Large",
+        "lar_price": 13.99,
+        "lar_cals": "330 cal/slice",
+        "image": "/images/pizzas/pizza_Supreme.png",
+        "description": "Enjoy this freshly prepared pizza including pepperoni, seasoned pork, beef, mushrooms, green bell peppers and red onions."
+    },
+    {
+        "id": "p_cheese",
+        "name": "Cheese Pizza",
+        "medium": "Medium",
+        "med_price": 9.99,
+        "med_cals": "230 cal/slice",
+        "large": "Large",
+        "lar_price": 13.99,
+        "lar_cals": "310 cal/slice",
+        "image": "/images/pizzas/pizza_Cheese.png",
+        "description": "With 50% more mozzarella cheese, Garlic Parmesan sauce, and a toasted Parmesan crust, this is surely the cheesiest of cheese pizzas."
+    },
+    {
+        "id": "p_bbq",
+        "name": "BBQ Chicken Pizza",
+        "medium": "Medium",
+        "med_price": 9.99,
+        "med_cals": "220 cal/slice",
+        "large": "Large",
+        "lar_price": 13.99,
+        "lar_cals": "300 cal/slice",
+        "image": "/images/pizzas/pizza_BBQ_Chicken.png",
+        "description": "A BBQ pizza topped with grilled chicken, bacon and red onion? Sign us up!"
+    }
+]

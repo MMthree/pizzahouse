@@ -1,0 +1,50 @@
+[
+    {
+        "id": "dr_pepsi",
+        "name": "Pepsi",
+        "price": 2.09,
+        "cals": "250 cal/bottle",
+        "image": "/images/drinks/drinks_pepsi.png",
+        "description": "The bold, refreshing, robust cola."
+    },
+    {
+        "id": "dr_dietpepsi",
+        "name": "Diet Pepsi",
+        "price": 2.09,
+        "cals": "0 cal/bottle",
+        "image": "/images/drinks/drinks_pepsi.png",
+        "description": "Light. Crisp. Refreshing. With zero sugar, zero calories, and zero carbs."
+    },
+    {
+        "id": "dr_cherrypepsi",
+        "name": "Cherry Pepsi",
+        "price": 2.09,
+        "cals": "260 cals/bottle",
+        "image": "/images/drinks/drinks_cherrypepsi.png",
+        "description": "The thrilling burst of unique cherry flavor and a sweet, crisp taste that gives you more to go wild for!"
+    },
+    {
+        "id": "dr_mtndew",
+        "name": "MTN Dew",
+        "price": 2.09,
+        "cals": "290 cals/bottle",
+        "image": "/images/drinks/drinks_mtndew.png",
+        "description": "Mountain Dew, the original instigator, refreshes with its one of a kind great taste."
+    },
+    {
+        "id": "dr_orange",
+        "name": "Orange Crush",
+        "price": 2.09,
+        "cals": "270 cals/bottle",
+        "image": "/images/drinks/drinks_orange.png",
+        "description": "Crush Orange sends your taste buds into flavor overdrive with refreshingly juicy orange flavor that is 100% caffeine free."
+    },
+    {
+        "id": "dr_sierramist",
+        "name": "Sierra Mist",
+        "price": 2.09,
+        "cals": "240 cals/bottle",
+        "image": "/images/drinks/drinks_sierramist.png",
+        "description": "A crisp, refreshing & caffeine free Lemon-Lime flavor soda with real sugar and a splash of real juice."
+    }
+]

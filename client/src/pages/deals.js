@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import Deals from "../Deals.json";
+import Deals from "../product-json/Deals.json";
 import DealsCard from "../components/DealsCard";
 import NutritionDisclaimer from "../components/NutritionDisclaimer";
 
@@ -14,7 +14,7 @@ const deals = () => {
                        <DealsCard 
                             id={deals.id}
                             name={deals.name}
-                            price={deals.display_price}
+                            price={deals.price}
                             image={deals.image}
                             description={deals.description}
                        />

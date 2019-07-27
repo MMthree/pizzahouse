@@ -27,24 +27,24 @@ const AppNavbar = () => {
         <nav>
             <div className="nav-links">
                 
-                    <UncontrolledDropdown setActiveFromChild>
-                        <DropdownToggle tag="a" className="" caret>
-                           Menu
-                        </DropdownToggle>
-                        <DropdownMenu>
-                            <Link to="/menu/pizza"><DropdownItem>Pizza</DropdownItem></Link>
-                            <Link to="/menu/wings"><DropdownItem>Wings</DropdownItem></Link>
-                            <Link to="/menu/sides"><DropdownItem>Sides</DropdownItem></Link>
-                            <Link to="/menu/desserts"><DropdownItem>Desserts</DropdownItem></Link>
-                            <Link to="/menu/drinks"><DropdownItem>Drinks</DropdownItem></Link>
-                        </DropdownMenu>
-                    </UncontrolledDropdown>
+                <UncontrolledDropdown setActiveFromChild>
+                    <DropdownToggle tag="a" className="" caret>
+                        Menu
+                    </DropdownToggle>
+                    <DropdownMenu>
+                        <Link to="/menu/pizza"><DropdownItem>Pizza</DropdownItem></Link>
+                        <Link to="/menu/wings"><DropdownItem>Wings</DropdownItem></Link>
+                        <Link to="/menu/sides"><DropdownItem>Sides</DropdownItem></Link>
+                        <Link to="/menu/desserts"><DropdownItem>Desserts</DropdownItem></Link>
+                        <Link to="/menu/drinks"><DropdownItem>Drinks</DropdownItem></Link>
+                    </DropdownMenu>
+                </UncontrolledDropdown>
                 
                 <Link to="/deals"><p className="">Deals</p></Link>
             </div>
             <div className="logo">
-                <img src="./images/PH_logo.png" alt="logo" />
-                <img src="./images/PH_logo_min.png" alt="logo" />
+                <img src="/images/PH_logo.png" alt="logo" />
+                <img src="/images/PH_logo_min.png" alt="logo" />
             </div>
             <div className="your-store">
                 <p>Your Store</p>
@@ -64,7 +64,7 @@ const AppNavbar = () => {
                 <div className="line2"></div>
                 <div className="line3"></div>
             </div>
-            <SideNav toggle={sideNavToggle} />
+            <SideNav closeSideNav={toggleSideNav} toggle={sideNavToggle} />
         </nav>
     )
 }
