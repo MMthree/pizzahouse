@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import AppNavbar from "./components/AppNavbar";
 import NavDivider from "./components/NavDivider";
+import NotFound from "./components/NotFound";
 
 // Context
 import { ShoppingProvider } from "./context/ShoppingCartContext";
@@ -29,10 +30,11 @@ function App() {
             <Switch>
               <Route exact path="/" component={home} />      
               <Route exact path="/deals" component={deals} />
-              <Route exact path="/menu/:food" component={menu} />
+              <Route exact path="/menu/:food(pizza|wings|sides|desserts|drinks)" component={menu} />
               <Route exact path="/contact" component={contactUs} />
               <Route exact path="/faq" component={faq} />
               <Route exact path="/terms-of-use" component={terms} />
+              <Route exact path='*' component={NotFound} />
             </Switch>
           </div>
         </Router>
