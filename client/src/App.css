@@ -250,6 +250,84 @@ a:hover {
   margin-top: 110px;
 }
 
+.cart-page a:hover {
+ text-decoration: none;
+}
+.carryOut-from {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.carryOut-from h6 {
+  margin: 0;
+}
+
+.carryOut-from p {
+  color: #555;
+  font-size: 14px;
+  margin: 0 0 0 10px;
+}
+
+.cart-summary {
+  padding: 20px;
+  border: 1px solid #d4d4d4;
+  margin: 10px 0 20px 0;
+}
+
+.cart-items-title {
+  display: flex;
+}
+
+.cart-items-title img{
+  height: 120px;
+}
+
+.cart-item-select {
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 1px solid #d4d4d4;
+}
+
+.coupon-not-valid {
+  color: #555;
+  font-size: 14px;
+}
+
+.coupon-div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.coupon-code {
+  margin: 10px 0px;
+  border-radius: 10px;
+  padding: 8px 16px;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 300;
+  font-style: italic;
+  color: #555;
+  border: 1px solid rgb(167, 167, 167);
+  width: 70%;
+}
+
+.coupon-code:focus {
+  outline: none;
+  box-shadow: 0 2px 4px 0 rgba(62, 69, 75, 0.5)
+}
+
+.cart-subtotal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-subtotal p {
+  margin: 0 0 4px 0;
+  font-weight: 500;
+
+}
 
 @media screen and (max-width:768px) {
 

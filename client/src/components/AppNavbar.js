@@ -49,16 +49,22 @@ const AppNavbar = () => {
             <div className="your-store">
                 <p>Your Store</p>
                 <p>10072 Chapman Ave.</p>
+                <Link to="/find-store">
+                    <p style={{textTransform: "none", color: "#266dcc", fontWeight: "500"}}>Change</p>
+                </Link>
             </div>
-            <div className="cart">
-                <div className="cart-icon">
-                    <i className="fas fa-shopping-cart"></i>
+
+            <Link to="/cart">
+                <div className="cart">
+                    <div className="cart-icon">
+                        <i className="fas fa-shopping-cart"></i>
                     <div className="cart-icon-count"><span>7</span></div>
                 </div>
-                
-                
-                <p>$5.00</p>
-            </div>
+                    <p>$5.00</p>
+                </div>
+            </Link>
+
+
             <div onClick={toggleSideNav} className={`burger ${burgerActive}`}>
                 <div className="line1"></div>
                 <div className="line2"></div>
