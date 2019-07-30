@@ -11,7 +11,7 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  min-height: 10vh;
+  min-height: 11vh;
 }
 
 a { 
@@ -71,7 +71,7 @@ a:hover {
 }
 
 .your-store {
-  padding: 20px 20px;
+  padding: 0px 20px;
   border-left: 2px solid lightgray;
 }
 
@@ -89,8 +89,71 @@ a:hover {
   margin: 0
 }
 
+.or {
+  font-size: 16px;
+  margin: 10px;
+  color: #555;
+}
+
+.store-search input {
+  border-radius: 50px;
+  width: 100%;
+  padding: 4px 20px;
+  border: 1px solid #a5a5a5;
+  color: #555;
+  font-size: 16px;
+}
+
+.store-search input:focus {
+  outline: none;
+}
+
+.zip-or-city {
+  margin-top: 10px;
+  color: #2a75d8;
+  font-weight: 500;
+  float: right;
+  cursor: pointer;
+}
+
+.store-card { 
+  display: flex;
+  align-items: center;
+}
+
+.store-card p {
+  margin: 0 10px;;
+  color: #555;  
+  font-size: 14px;
+}
+
+.store-hours p:nth-child(1) {
+  margin: 0;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.store-hours p:nth-child(2) {
+  margin: 0;
+  color: #555;  
+  font-size: 14px;
+}
+
+.store-hours p:nth-child(3) {
+  margin: 0;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.store-hours p:nth-child(4) {
+  margin: 0;
+  color: #555;  
+  font-size: 14px;
+}
+
+
 .cart {
-  padding: 16px 10px;
+  padding: 6px 10px;
   border-left: 2px solid lightgray;
   text-align: center;
 }
@@ -354,7 +417,7 @@ a:hover {
   .side-nav {
     position: absolute;
     right: 0px;
-    top: 10vh;
+    top: 11vh;
     height: 92vh;
     background-color: #131313;
     display: flex;

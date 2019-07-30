@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import CarryOutAddress from "../components/CarryOutAddress";
 import NutritionDisclaimer from "../components/NutritionDisclaimer";
 import CartItemCard from "../components/CartItemCard";
 import CheckCoupon from "../components/CheckCoupon";
@@ -11,13 +12,7 @@ const cart = () => {
         <div className="cart-page">
             <h1 style={{ fontSize: "50px" }} className="mt-3">My Order</h1>
 
-            <div className="carryOut-from">
-                <h6>CARRYOUT FROM: </h6>
-                <p>10072 Chapman Ave, Garden Grove, Ca 92840</p>
-                <Link to="/find-store">
-                    <p style={{color: "#266dcc", fontWeight: "500"}}>Change</p>
-                </Link>
-            </div>
+            <CarryOutAddress />
 
             <div className="row">
 

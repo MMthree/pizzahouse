@@ -1,7 +1,7 @@
 import React,{ useState, useContext } from 'react';
 import { Link } from "react-router-dom";
 import SideNav from "./SideNav";
-import { ShoppingCartContext } from "../context/ShoppingCartContext";
+import { YourStoreContext } from "../context/YourStoreContext";
 
 import {  
     UncontrolledDropdown, 
@@ -13,7 +13,7 @@ import {
 
 const AppNavbar = () => {
 
-    const value = useContext(ShoppingCartContext);
+    const { store } = useContext(YourStoreContext);
 
     const [sideNavToggle, setSideNavToggle] = useState(false);
 
@@ -48,9 +48,13 @@ const AppNavbar = () => {
             </div>
             <div className="your-store">
                 <p>Your Store</p>
-                <p>10072 Chapman Ave.</p>
+                <p>{store.short}</p>
                 <Link to="/find-store">
-                    <p style={{textTransform: "none", color: "#266dcc", fontWeight: "500"}}>Change</p>
+                    <p 
+                        style={{textTransform: "none", color: "#266dcc", fontWeight: "500"}}
+                    >
+                        {store.short === "" ? "Find A Store" : "Change"}
+                    </p>
                 </Link>
             </div>
 

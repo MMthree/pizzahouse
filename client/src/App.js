@@ -5,6 +5,7 @@ import NavDivider from "./components/NavDivider";
 import NotFound from "./components/NotFound";
 
 // Context
+import { StoreProvider } from "./context/YourStoreContext";
 import { ShoppingProvider } from "./context/ShoppingCartContext";
 
 // Pages
@@ -22,26 +23,28 @@ import './App.css';
 
 function App() {
   return (
-    <ShoppingProvider>
-      <div>
-        <Router>
-          <AppNavbar />
-          <NavDivider />
-          <div className="container">
-            <Switch>
-              <Route exact path="/" component={home} />      
-              <Route exact path="/deals" component={deals} />
-              <Route exact path="/menu/:food(pizza|wings|sides|desserts|drinks)" component={menu} />
-              <Route exact path="/cart" component={cart} />
-              <Route exact path="/find-store" component={findStore} />
-              <Route exact path="/faq" component={faq} />
-              <Route exact path="/terms-of-use" component={terms} />
-              <Route exact path='*' component={NotFound} />
-            </Switch>
-          </div>
-        </Router>
-      </div>
-    </ShoppingProvider>
+    <StoreProvider>
+      <ShoppingProvider>
+        <div>
+          <Router>
+            <AppNavbar />
+            <NavDivider />
+            <div className="container">
+              <Switch>
+                <Route exact path="/" component={home} />      
+                <Route exact path="/deals" component={deals} />
+                <Route exact path="/menu/:food(pizza|wings|sides|desserts|drinks)" component={menu} />
+                <Route exact path="/cart" component={cart} />
+                <Route exact path="/find-store" component={findStore} />
+                <Route exact path="/faq" component={faq} />
+                <Route exact path="/terms-of-use" component={terms} />
+                <Route exact path='*' component={NotFound} />
+              </Switch>
+            </div>
+          </Router>
+        </div>
+      </ShoppingProvider>
+    </StoreProvider>
   );
 }
 
