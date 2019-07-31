@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import AppNavbar from "./components/AppNavbar";
 import NavDivider from "./components/NavDivider";
 import NotFound from "./components/NotFound";
+import AppFooter from "./components/AppFooter";
 
 // Context
 import { StoreProvider } from "./context/YourStoreContext";
@@ -40,6 +41,7 @@ function App() {
                 <Route exact path="/terms-of-use" component={terms} />
                 <Route exact path='*' component={NotFound} />
               </Switch>
+              <AppFooter />
             </div>
           </Router>
         </div>

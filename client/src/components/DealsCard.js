@@ -13,9 +13,9 @@ const DealsCard = props => {
 
     const { id, name, price, description, image } = props;
     return (
-        <div className="deals_card col-12 col-sm-12 col-md-5 mx-auto">
-            
-               <UncontrolledPopover trigger="legacy" placement="left-start" target={id}>
+        <div className="deals_card_main col-12 col-sm-12 col-md-6">
+            <div className="deals_card">
+                <UncontrolledPopover trigger="legacy" placement="left-start" target={id}>
                     <PopoverBody placement="left" >
                         <PopoverBody>{description}</PopoverBody>
                     </PopoverBody>
@@ -39,6 +39,8 @@ const DealsCard = props => {
                     <img className="deal_image rounded-lg" alt={name} src={image} />
                 </div>
             </div>
+            </div>
+               
         </div>
     )
 }

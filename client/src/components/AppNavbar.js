@@ -42,10 +42,14 @@ const AppNavbar = () => {
                 
                 <Link to="/deals"><p className="">Deals</p></Link>
             </div>
-            <div className="logo">
-                <img src="/images/PH_logo.png" alt="logo" />
-                <img src="/images/PH_logo_min.png" alt="logo" />
-            </div>
+
+            <Link to="/">
+                <div className="logo">
+                    <img src="/images/PH_logo.png" alt="logo" />
+                    <img src="/images/PH_logo_min.png" alt="logo" />
+                </div>
+            </Link>
+            
             <div className="your-store">
                 <p>Your Store</p>
                 <p>{store.short}</p>

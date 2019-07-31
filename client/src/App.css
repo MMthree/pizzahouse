@@ -200,9 +200,13 @@ a:hover {
 }
 
 .sidenav-top {
-  height: 100px;
   background-color: #B2010D;
   color: white;
+  padding: 10px 0;
+}
+
+.sidenav-top p {
+  font-size: 16px;
 }
 
 .sidenav-links {
@@ -217,6 +221,7 @@ a:hover {
   cursor: pointer;
   font-size: 18px;
   padding: 10px 20px;
+  margin: 0;
   border-bottom: 1px solid #333333;
 }
 
@@ -231,7 +236,16 @@ a:hover {
   cursor: pointer;
   font-size: 14px;  
   padding-left: 50px;
+  margin: 0;
 }
+
+.sidenav-top p {
+  margin: 0;
+  font-size: 16px;
+  text-transform: none;
+  border: none;
+}
+
 
 .nav-divider {
   background-color: #131313;
@@ -253,6 +267,7 @@ a:hover {
   font-size: 16px;
   padding: 11px 0;
   color: #F8E080;
+  cursor: pointer;
 }
 
 .divider-lower {
@@ -260,6 +275,68 @@ a:hover {
   width: 100%;
   height: 2px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.671), 0 6px 20px 0 rgba(0, 0, 0, 0.445)
+}
+
+.home-deals {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.home-deals h1{
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.home-deals p {
+  margin: 0;
+  font-weight: 500;
+  color: #2a75d8;
+}
+
+.home-deals a:hover {
+  text-decoration: none;
+}
+
+.home-deals-border {
+  border: 1px solid rgb(196, 196, 196);
+}
+
+.home-deals-card {
+  padding: 10px 10px;
+}
+
+.home-deals-card img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.home-deals-card h5 {
+  font-size: 16px;
+  margin: 10px 0 0 10px;
+}
+
+.home-deals-card p {
+  font-size: 14px;
+  margin: 0 0 0 10px;
+}
+
+.home-menu-card {
+  padding: 12px;
+  position: relative;
+}
+
+.home-menu-card img {
+  width: 100%;
+}
+
+.home-menu-card p {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  color: white;
+  font-weight: 500;
+  font-size: 25px;
 }
 
 .menu-page-nav {
@@ -275,9 +352,14 @@ a:hover {
   margin: 0 3%;
 }
 
+.deals_card_main {
+  padding: 5px;
+}
+
 .deals_card {
   border: 1px solid lightgray;
   margin: 5px 5px;
+  padding: 0 12px;
 }
 
 .popover {
@@ -389,8 +471,52 @@ a:hover {
 .cart-subtotal p {
   margin: 0 0 4px 0;
   font-weight: 500;
-
 }
+
+.app-footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  padding: 10px 10px;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+}
+
+.footer-links, .social-links {
+  display: flex;
+  align-items: center;
+}
+
+.footer-links p {
+  margin: 0 10px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.footer-links a {
+  text-decoration: none;
+}
+
+.footer-links p:hover {
+  color: #b2010d;
+}
+
+.footer-icons {
+  text-align: center;
+  background-color: #E52A33;
+  color: white;
+  margin: 0 5px;
+  padding: 6px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.footer-icons:hover {
+  background-color: black;
+}
+
 
 @media screen and (max-width:768px) {
 

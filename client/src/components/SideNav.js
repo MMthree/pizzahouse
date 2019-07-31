@@ -14,13 +14,13 @@ const SideNav = ({ closeSideNav ,toggle }) => {
 
     const [customerToggle, setCustomerToggle] = useState(false);
     const [customerList] = useState([
-        { name: "Contact Us", path: "/contact" },
-        { name: "FAQs", path: "/faq" }
+        { name: "Contact Us", path: "#" },
+        { name: "FAQs", path: "#" }
     ])
 
     const [policyToggle, setPolicyToggle] = useState(false);
     const [policyList] = useState([
-        { name: "Terms Of Use", path: "/terms-of-use" }
+        { name: "Terms Of Use", path: "#" }
     ])
 
     const toggleActive = !toggle ? null : "sidenav-active";
@@ -47,10 +47,11 @@ const SideNav = ({ closeSideNav ,toggle }) => {
             <div className={`side-nav ${toggleActive}`}>
                 <div className="sidenav-links">
                     <div className="sidenav-top">
-                        Sign up
+                        <p onClick={closeSideNav}>Sign In <span> | Create An Account</span></p>
+                        <Link to="/find-store"><p onClick={closeSideNav}>Find A Pizza House</p></Link>
                     </div>
                     <Link to="/deals">
-                        <p>Deals</p>
+                        <p onClick={closeSideNav}>Deals</p>
                     </Link>
                     <p 
                         onClick={expandList} 

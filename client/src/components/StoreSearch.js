@@ -30,7 +30,7 @@ const StoreSearch = () => {
 
     const searchStoresWithZip = e => {
         if (search.trim() === "") {
-            console.log("That location does not exist")
+            return
         } else {
             findStore(search);
             setLoading(true);
