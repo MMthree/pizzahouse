@@ -1,12 +1,10 @@
-import React, { useState } from 'react';
-
-import {
-    UncontrolledPopover,
-    PopoverBody,
-} from 'reactstrap';
+import React, { useState, useContext } from 'react';
+import { UncontrolledPopover, PopoverBody } from 'reactstrap';
+import { ShoppingCartContext } from "../context/ShoppingCartContext";
 
 
 const PizzaMenuCard = props => {
+    const { addToCart } = useContext(ShoppingCartContext);
 
     const [popoverOpen, setPopoverOpen] = useState(false);
 
@@ -28,7 +26,25 @@ const PizzaMenuCard = props => {
         if (val === "large") {
             setPizzaSize(true)
         }
-    }
+    };
+
+    const handleSubmit = e => {
+        e.preventDefault();
+
+        const whatSize = !pizzaSize ? med_price : lar_price;
+
+        const order = {
+            id: id + e.target.size.value,
+            name,
+            image,
+            price: whatSize,
+            type: e.target.size.value,
+            amount: parseInt(e.target.amount.value),
+            total: whatSize * e.target.amount.value
+        }
+        addToCart(order);
+    };
+
     return (
         <div className="deals_card_main col-12 col-sm-12 col-md-6">
             <div className="deals_card">
@@ -50,18 +66,20 @@ const PizzaMenuCard = props => {
 
                 <div className="row py-3">
                     <div className="col-7 mt-auto">
-                        <select onChange={handleChange} id="size" className="menu-size btn-block">
-                            <option value="medium">Medium</option>
-                            <option value="large">Large</option>
-                        </select>
-                        <select id="amount" className="menu-size btn-block">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                        <button className="deals_btn btn btn-danger btn-block">Add To Order</button>
+                        <form onSubmit={handleSubmit}>
+                            <select onChange={handleChange} name="size" className="menu-size btn-block">
+                                <option value="medium">Medium</option>
+                                <option value="large">Large</option>
+                            </select>
+                            <select name="amount" className="menu-size btn-block">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                            <button className="deals_btn btn btn-danger btn-block" type="submit">Add To Order</button> 
+                        </form>
                     </div>
                     <div className="col-5 mt-auto cal-info text-center">
                         <img className="deal_image rounded-lg" alt={name} src={image} />

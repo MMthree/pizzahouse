@@ -1,7 +1,9 @@
-import React,{ useState, useContext } from 'react';
+import React,{ useState, useContext, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import SideNav from "./SideNav";
 import { YourStoreContext } from "../context/YourStoreContext";
+import { ShoppingCartContext } from "../context/ShoppingCartContext";
+
 
 import {  
     UncontrolledDropdown, 
@@ -14,6 +16,8 @@ import {
 const AppNavbar = () => {
 
     const { store } = useContext(YourStoreContext);
+    const { cart, cartTotalCost } = useContext(ShoppingCartContext);
+
 
     const [sideNavToggle, setSideNavToggle] = useState(false);
 
@@ -62,15 +66,19 @@ const AppNavbar = () => {
                 </Link>
             </div>
 
-            <Link to="/cart">
+            
                 <div className="cart">
+                    <Link to="/cart">
                     <div className="cart-icon">
                         <i className="fas fa-shopping-cart"></i>
-                    <div className="cart-icon-count"><span>7</span></div>
+                        <div className="cart-icon-count">
+                            <span>{cart.length}</span>
+                        </div>
+                    </div>
+                    <p>${cartTotalCost}</p>
+                    </Link>
                 </div>
-                    <p>$5.00</p>
-                </div>
-            </Link>
+            
 
 
             <div onClick={toggleSideNav} className={`burger ${burgerActive}`}>

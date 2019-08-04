@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { ShoppingCartContext } from "../context/ShoppingCartContext";
 
 import {
     UncontrolledPopover,
@@ -7,6 +8,7 @@ import {
 
 
 const SidesMenuCard = props => {
+    const { addToCart } = useContext(ShoppingCartContext);
 
     const [popoverOpen, setPopoverOpen] = useState(false);
 
@@ -17,6 +19,20 @@ const SidesMenuCard = props => {
 
     const { id, name, description, image, price, cals } = props;
 
+
+    const handleSubmit = e => {
+        e.preventDefault();
+
+        const order = {
+            id,
+            name,
+            image,
+            price,
+            amount: parseInt(e.target.amount.value),
+            total: price * e.target.amount.value
+        }
+        addToCart(order);
+    };
     return (
         <div className="deals_card_main col-12 col-sm-12 col-md-6 float-left">
             <div className="deals_card">
@@ -38,17 +54,19 @@ const SidesMenuCard = props => {
 
                 <div className="row py-3">
                     <div className="col-7 mt-auto">
-                        <select id="size" className="menu-size btn-block">
-                            <option value="small">Order</option>
-                        </select>
-                        <select id="amount" className="menu-size btn-block">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                        <button className="deals_btn btn btn-danger btn-block">Add To Order</button>
+                        <form onSubmit={handleSubmit}>
+                            <select id="size" className="menu-size btn-block">
+                                <option value="small">Order</option>
+                            </select>
+                            <select name="amount" className="menu-size btn-block">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                            <button className="deals_btn btn btn-danger btn-block">Add To Order</button>
+                        </form>
                     </div>
                     <div className="col-5 mt-auto cal-info text-center">
                         <img className="deal_image rounded-lg" alt={name} src={image} />

@@ -15,8 +15,6 @@ import deals from "./pages/deals";
 import menu from "./pages/menu";
 import cart from "./pages/cart";
 import findStore from "./pages/findStore";
-import faq from "./pages/faq";
-import terms from "./pages/terms";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
@@ -37,8 +35,6 @@ function App() {
                 <Route exact path="/menu/:food(pizza|wings|sides|desserts|drinks)" component={menu} />
                 <Route exact path="/cart" component={cart} />
                 <Route exact path="/find-store" component={findStore} />
-                <Route exact path="/faq" component={faq} />
-                <Route exact path="/terms-of-use" component={terms} />
                 <Route exact path='*' component={NotFound} />
               </Switch>
               <AppFooter />

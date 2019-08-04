@@ -434,6 +434,13 @@ a:hover {
   border: 1px solid #d4d4d4;
 }
 
+.remove-cart-item {
+  color: #2a75d8;
+  font-weight: 500;
+  padding: 5px 0; 
+  cursor: pointer;
+}
+
 .coupon-not-valid {
   color: #555;
   font-size: 14px;
