@@ -32,7 +32,7 @@ const AppNavbar = () => {
             <div className="nav-links">
                 
                 <UncontrolledDropdown setActiveFromChild>
-                    <DropdownToggle tag="a" className="" caret>
+                    <DropdownToggle tag="a"caret>
                         Menu
                     </DropdownToggle>
                     <DropdownMenu>
@@ -44,7 +44,7 @@ const AppNavbar = () => {
                     </DropdownMenu>
                 </UncontrolledDropdown>
                 
-                <Link to="/deals"><p className="">Deals</p></Link>
+                <Link to="/deals"><p>Deals</p></Link>
             </div>
 
             <Link to="/">

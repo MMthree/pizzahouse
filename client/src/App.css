@@ -35,6 +35,10 @@ a:hover {
   margin: 0;
 }
 
+.nav-links-active:hover {
+  color: red
+}
+
 .dropdown-toggle {
   font-size: 18px;
   font-weight: 500;
