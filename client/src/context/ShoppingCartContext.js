@@ -7,21 +7,36 @@ export const ShoppingProvider = props => {
     const [cart, setCart] = useState([]);
     const [cartTotalCost, setCartTotalCost] = useState("0.00");
     const [dealActive, setDealActive] = useState(false);
-
+    
     useEffect(() => {
-        console.log(cart);
+        if (localStorage.getItem("myCart")) {
+            setCart([...JSON.parse(localStorage.getItem("myCart"))]);   
+        }
+        if (localStorage.getItem("dealActive")) {
+            setDealActive(JSON.parse(localStorage.getItem("dealActive")));   
+        }
+    }, [])
+    
+    // Shopping cart effect
+    useEffect(() => {
         if (cart.length >= 1) {
             const add = cart.reduce((a, b) => ({ total: a.total + b.total }));
             setCartTotalCost(add.total.toFixed(2));
         } else {
             setCartTotalCost("0.00")
         }
+        localStorage.setItem("myCart", JSON.stringify([...cart]));
     }, [cart]);
+
+    // deal active effect 
+    useEffect(() => {
+        localStorage.setItem("dealActive", JSON.stringify(dealActive));
+    }, [dealActive])
 
     // Add items to cart 
     const addToCart = item => {
         const find = cart.find(i => i.id === item.id && i.type === item.type);
-        console.log(cart);
+
 
 
         // if item not found in state, then add it
@@ -34,6 +49,7 @@ export const ShoppingProvider = props => {
             find.total = find.amount * find.price
             setCart([...cart]);
         }
+        console.log(cart);
     };
 
     // update item amount in the cart summary
