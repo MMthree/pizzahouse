@@ -171,7 +171,7 @@ a:hover {
 .cart-icon-count {
   position: absolute;
   top: -7px;
-  left: 16px;
+  left: 20px;
   background-color: #E52A33;
   height: 20px;
   width: 20px;
@@ -482,6 +482,89 @@ a:hover {
 .cart-subtotal p {
   margin: 0 0 4px 0;
   font-weight: 500;
+}
+
+
+.payment-methods input[type="radio"] {
+  display: none;
+}
+
+.payment-methods input[type="radio"]+label {
+  position: relative;
+  padding: 0px 0 0 40px;
+  cursor: pointer;
+}
+
+.payment-methods input[type="radio"]+label:before {
+  content: '';
+  background: #fff;
+  border: 1px solid black;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.payment-methods input[type="radio"]+label:after {
+  content: '';
+  background: black;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  opacity: 0;
+}
+
+.payment-methods input[type="radio"]:checked+label:before {
+  border: 2px solid rgb(214, 0, 0);
+}
+
+.payment-methods input[type="radio"]:checked+label:after {
+  opacity: 1;
+}
+
+.gift-code {
+  margin: 10px 0px;
+  border-radius: 10px;
+  padding: 8px 16px;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 300;
+  font-style: italic;
+  color: #555;
+  border: 1px solid rgb(167, 167, 167);
+  width: 250px;
+}
+
+.gift-card-form p{
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.giftcard-not-valid {
+  color: rgb(236, 0, 0);
+  font-size: 12px;
+  font-weight: 300;
+  margin: 0; 
+}
+
+.card-details input {
+  margin: 10px 0px;
+  border-radius: 10px;
+  padding: 8px 16px;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 300;
+  font-style: italic;
+  color: #555;
+  border: 1px solid rgb(167, 167, 167);
+  width: 100%;
+  outline: none;
 }
 
 .app-footer {

@@ -66,6 +66,8 @@ const CartSummary = () => {
                 </div>
             </div>
 
+
+            {cart.length === 0 ? null : (
             <div className="row my-2">
                 <div className="col-12 col-md-6 my-1 mx-auto">
                     <Link to="/menu/pizza">
@@ -79,7 +81,8 @@ const CartSummary = () => {
                     </Link>
                 </div>
             </div>
-
+            )}
+            
         </div>
     )
 }
