@@ -49,7 +49,6 @@ export const ShoppingProvider = props => {
             find.total = find.amount * find.price
             setCart([...cart]);
         }
-        console.log(cart);
     };
 
     // update item amount in the cart summary

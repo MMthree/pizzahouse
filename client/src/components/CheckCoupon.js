@@ -1,4 +1,5 @@
 import React, { useState, Fragment } from 'react';
+import Cleave from "cleave.js/react";
 
 const CheckCoupon = () => {
 
@@ -14,7 +15,9 @@ const CheckCoupon = () => {
             {notValid}
         
             <div className="coupon-div">
-                <input placeholder="Enter coupon Code" className="coupon-code"></input>
+            <Cleave className="coupon-code"  placeholder="Enter coupon Code"
+                    options={{creditCard: true, numeralThousandsGroupStyle: 'none'}}
+                     />
                 <button onClick={handleCoupon} className="btn btn-outline-danger">APPLY</button> 
             </div>
         </Fragment>

@@ -1,22 +1,25 @@
 import React, { useState } from 'react';
+import Cleave from "cleave.js/react";
 
 const GiftCardForm = () => {
 
-    const [notValid, setNotValid] = useState(null);
+    const [notValid, setNotValid] = useState(false);
 
 
     const handleGiftCard = e => {
         e.preventDefault();
-        setNotValid(<h6 className="giftcard-not-valid">Please enter valid gift card number.</h6>)
+        setNotValid(true)
     };
 
     return (
         <div className="col-12">
             <div className="mt-2 gift-card-form">
                 <p>Gift card Number</p>
-                <input placeholder="Enter card number" type="text" className="my-2 gift-code" />
+                <Cleave className={!notValid ? "my-2 gift-code" : "my-2 gift-code invalid-input"} placeholder="Card number"
+                    options={{creditCard: true, numeralThousandsGroupStyle: 'none'}}
+                />
                 <br />
-                {notValid}
+                {notValid ? <h6 className="giftcard-not-valid">Please enter valid gift card number.</h6> : null}
                 <button onClick={handleGiftCard} className="my-2 btn btn-danger">APPLY GIFT CARD</button> 
             </div>
         </div>
