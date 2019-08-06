@@ -16,7 +16,6 @@ export const StoreProvider = props => {
         if (myStore) {
             setStore({ short: myStore.shortAddress, full: myStore.fullAddress });
         }
-        
     },[store]);
 
     // Yelp api headers
@@ -37,7 +36,7 @@ export const StoreProvider = props => {
 
     // get coordinates from getLocation function
     const searchWithCoordinates = position => {
-        const url = `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=pizzahut&latitude=${position.coords.latitude}&longitude=${position.coords.longitude}&limit=10`;
+        const url = `https://api.yelp.com/v3/businesses/search?term=pizzahut&latitude=${position.coords.latitude}&longitude=${position.coords.longitude}&limit=10`;
         
         axios.get(url, config)
         .then(res => {
@@ -48,7 +47,7 @@ export const StoreProvider = props => {
     
     // Find all nearby stores with zip or address
     const findStore = zip => {
-        const url = `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=pizzahut&location=${zip}&limit=10`;
+        const url = `https://api.yelp.com/v3/businesses/search?term=pizzahut&location=${zip}&limit=10`;
         
         axios.get(url, config)
         .then(res => {
