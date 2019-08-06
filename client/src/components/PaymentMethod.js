@@ -6,9 +6,10 @@ import PaymentModals from "./PaymentModals";
 
 import { ShoppingCartContext } from "../context/ShoppingCartContext";
 
-const PaymentMethod = () => {
-    const { cartTotalCost, } = useContext(ShoppingCartContext);
+const PaymentMethod = ({ history }) => {
+    const { setCart, cartTotalCost, setDealActive } = useContext(ShoppingCartContext);
     const [paymentType, setPaymentType] = useState("credit");
+    const [paymentSuccess, setPaymentSuccess] = useState(false);
     const [agreeTerms, setAgreeTerms] = useState(null);
     
     const addedTax = cartTotalCost * .0725;
@@ -79,6 +80,12 @@ const PaymentMethod = () => {
                 validateCredit();
                 if(creditPass) {
                     toggle();
+                    setPaymentSuccess(true);
+                    setTimeout(() => {
+                        history.push("/cart")
+                        setCart([]);
+                        setDealActive(false);
+                    },10000)
                 }
             }
             if (paymentType === "gift") {
@@ -86,6 +93,12 @@ const PaymentMethod = () => {
             }
             if (paymentType === "store") {
                 toggle();
+                setPaymentSuccess(true);
+                setTimeout(() => {
+                    history.push("/cart")
+                    setCart([]);
+                    setDealActive(false);
+                },10000)
             }
         }
     };
@@ -147,7 +160,11 @@ const PaymentMethod = () => {
             </div>
 
             <div className="col-12 col-md-6">
-                <button onClick={placeOrder} className="btn btn-danger btn-block">PLACE YOUR ORDER</button>;
+                {!paymentSuccess ? (
+                    <button onClick={placeOrder} className="btn btn-danger btn-block">PLACE YOUR ORDER</button>
+                ) : (
+                    <button disabled className="btn btn-danger btn-block">PLACE YOUR ORDER</button>
+                )}
             </div>
 
             {/* MODALS */}

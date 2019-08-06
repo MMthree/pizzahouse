@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import PaymentMethod from "../components/PaymentMethod";
 
-const checkout = () => {
+const checkout = ({history}) => {
+
     return (
         <div>
             <div className="my-4">
@@ -13,7 +14,7 @@ const checkout = () => {
 
             <h1 style={{ fontSize: "40px" }} className="mt-3 mb-4">Payment</h1>
 
-            <PaymentMethod />
+            <PaymentMethod history={history}/>
         </div>
     )
 }

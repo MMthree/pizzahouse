@@ -83,6 +83,7 @@ export const ShoppingProvider = props => {
             addDeal,
             updateCartAmount,
             dealActive,
+            setDealActive,
             cartTotalCost,
             removeFromCart
         }}>
