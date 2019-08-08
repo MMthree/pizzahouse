@@ -42,22 +42,27 @@ const PaymentMethod = ({ history }) => {
 
         if (name.value === "") {
             name.classList.add("invalid-input");
+            name.scrollIntoView();
             creditPass = false;
         }
         if (num.value === "" || num.value.length < 17) {
             num.classList.add("invalid-input");
+            name.scrollIntoView();
             creditPass = false;
         }
         if (exp.value === "" || exp.value.length < 7) {
             exp.classList.add("invalid-input");
+            name.scrollIntoView();
             creditPass = false;
         }
         if (cvv.value === "" || cvv.value.length < 3) {
             cvv.classList.add("invalid-input");
+            name.scrollIntoView();
             creditPass = false;
         }
         if (zip.value === "" || zip.value.length < 5) {
             zip.classList.add("invalid-input");
+            name.scrollIntoView();
             creditPass = false;
         }
     };
@@ -82,7 +87,6 @@ const PaymentMethod = ({ history }) => {
                     toggle();
                     setPaymentSuccess(true);
                     setTimeout(() => {
-                        history.push("/cart")
                         setCart([]);
                         setDealActive(false);
                     },10000)
@@ -95,7 +99,6 @@ const PaymentMethod = ({ history }) => {
                 toggle();
                 setPaymentSuccess(true);
                 setTimeout(() => {
-                    history.push("/cart")
                     setCart([]);
                     setDealActive(false);
                 },10000)

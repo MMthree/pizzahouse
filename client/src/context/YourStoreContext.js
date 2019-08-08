@@ -16,7 +16,7 @@ export const StoreProvider = props => {
         if (myStore) {
             setStore({ short: myStore.shortAddress, full: myStore.fullAddress });
         }
-    },[store]);
+    },[]);
 
     // Yelp api headers
     const config = {

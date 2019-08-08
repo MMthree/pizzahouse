@@ -12,6 +12,7 @@ const WingsMenuCard = props => {
     const { addToCart } = useContext(ShoppingCartContext);
 
     const [popoverOpen, setPopoverOpen] = useState(false);
+    const [btnName, setBtnName] = useState("Add To Order");
 
     const toggle = () => {
         setPopoverOpen(!popoverOpen);
@@ -48,6 +49,11 @@ const WingsMenuCard = props => {
             total: whatSize * e.target.amount.value
         }
         addToCart(order);
+
+        setBtnName(<i style={{marin: "0", padding: '0' , fontSize: "25px"}} className="far fa-check-circle"></i>);
+        setTimeout(() => {
+            setBtnName("Add To Order")
+        }, 2000)
     };
 
     return (
@@ -83,7 +89,7 @@ const WingsMenuCard = props => {
                                 <option value="4">4</option>
                                 <option value="5">5</option>
                             </select>
-                            <button className="deals_btn btn btn-danger btn-block">Add To Order</button>
+                            <button className="deals_btn btn btn-danger btn-block">{btnName}</button>
                         </form>
                     </div>
                     <div className="col-5 mt-auto cal-info text-center">

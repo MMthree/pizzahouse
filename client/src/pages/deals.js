@@ -20,10 +20,13 @@ const deals = () => {
                        />
                    </Fragment>
                ))}
+               <div className="col-12">
+                   <NutritionDisclaimer />
+               </div>
            </div>
-           <div className="row">
-               <NutritionDisclaimer />
-           </div>
+
+               
+
         </div>
     )
 }

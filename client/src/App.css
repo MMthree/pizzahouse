@@ -654,7 +654,6 @@ a:hover {
     top: 11vh;
     height: 92vh;
     background-color: #131313;
-    display: flex;
     flex-direction: column;
     width: 50%;
     transform: translateX(100%);
@@ -664,6 +663,7 @@ a:hover {
 }
 
 .sidenav-active {
+  display: flex;
   transform: translateX(0);
 }
 

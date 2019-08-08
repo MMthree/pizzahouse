@@ -30,13 +30,20 @@ const PaymentModals = ({ toggle, modal, paymentType }) => {
                                 </div>
                         </Modal>
 
+
+    const modalSelect = type => {
+
+        if (type === "gift") {
+            return GIFTCARD
+        }
+        if (type === "store" || type === "credit") {
+            return ORDERSUCCESS
+        }
+    }
+
     return (
         <div>
-            {paymentType === "gift" ? (
-                GIFTCARD
-            ): paymentType === "store" || paymentType === "credit" ? (
-                ORDERSUCCESS
-            ): null }
+            {modalSelect(paymentType)}
         </div>
     )
 }

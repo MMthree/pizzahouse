@@ -1,5 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { UncontrolledPopover, PopoverBody } from 'reactstrap';
+
+
 import { ShoppingCartContext } from "../context/ShoppingCartContext";
 
 
@@ -7,6 +9,7 @@ const PizzaMenuCard = props => {
     const { addToCart } = useContext(ShoppingCartContext);
 
     const [popoverOpen, setPopoverOpen] = useState(false);
+    const [btnName, setBtnName] = useState("Add To Order");
 
     const toggle = () => {
         setPopoverOpen(!popoverOpen);
@@ -30,7 +33,6 @@ const PizzaMenuCard = props => {
 
     const handleSubmit = e => {
         e.preventDefault();
-
         const whatSize = !pizzaSize ? med_price : lar_price;
 
         const order = {
@@ -43,6 +45,11 @@ const PizzaMenuCard = props => {
             total: whatSize * e.target.amount.value
         }
         addToCart(order);
+
+        setBtnName(<i style={{marin: "0", padding: '0' , fontSize: "25px"}} className="far fa-check-circle"></i>);
+        setTimeout(() => {
+            setBtnName("Add To Order")
+        }, 2000)
     };
 
     return (
@@ -78,7 +85,7 @@ const PizzaMenuCard = props => {
                                 <option value="4">4</option>
                                 <option value="5">5</option>
                             </select>
-                            <button className="deals_btn btn btn-danger btn-block" type="submit">Add To Order</button> 
+                            <button className="deals_btn btn btn-danger btn-block" type="submit">{btnName}</button> 
                         </form>
                     </div>
                     <div className="col-5 mt-auto cal-info text-center">

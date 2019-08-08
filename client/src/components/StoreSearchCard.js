@@ -3,11 +3,13 @@ import { YourStoreContext } from "../context/YourStoreContext";
 
 const StoreSearchCard = ({street, city, phone}) => {
 
-    const { saveStore } = useContext(YourStoreContext);
+    const { store, saveStore } = useContext(YourStoreContext);
 
     const chosenStore = () => {
         saveStore(street, city)
     };
+
+    const selected = store.short === street ? "btn-danger" : "btn-outline-danger";
 
     return (
         <div className="col-12">
@@ -33,7 +35,12 @@ const StoreSearchCard = ({street, city, phone}) => {
                     </div>
                 </div>  
 
-                <button onClick={chosenStore} className="btn btn-outline-danger btn-block mt-3">Select Store</button>
+                <button 
+                    onClick={chosenStore} 
+                    className={`btn ${selected} btn-block mt-3`}
+                    >
+                        Select Store
+                </button>
             </div>          
         </div>
     )
