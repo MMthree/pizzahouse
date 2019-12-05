@@ -3,6 +3,7 @@
 
 This project is using the following technologies:
 
+- [React](https://facebook.github.io/react/) and [React Router](https://reacttraining.com/react-router/)
 -  [Axios](https://github.com/axios/axios) to access the Yelp API.
 -  [Bootstrap](https://getbootstrap.com/) combined with [React Strap](https://reactstrap.github.io/) for styling.
 -  [Cleave.js](https://github.com/nosir/cleave.js) for input text formatting.
