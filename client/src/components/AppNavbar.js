@@ -16,7 +16,7 @@ import {
 const AppNavbar = () => {
 
     const { store } = useContext(YourStoreContext);
-    const { cart, cartTotalCost } = useContext(ShoppingCartContext);
+    const { cart, cartTotalCost, cartItemsLength } = useContext(ShoppingCartContext);
 
 
     const [sideNavToggle, setSideNavToggle] = useState(false);
@@ -26,6 +26,7 @@ const AppNavbar = () => {
     };
 
     const burgerActive = !sideNavToggle ? null : "burger-active";
+
     
     return (
         <nav>

@@ -85,7 +85,7 @@ export const ShoppingProvider = props => {
             dealActive,
             setDealActive,
             cartTotalCost,
-            removeFromCart
+            removeFromCart,
         }}>
             {props.children}
         </ShoppingCartContext.Provider>

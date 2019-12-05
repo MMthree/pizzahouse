@@ -1,1 +1,10 @@
 /* /index.html 200
+
+app.use(cors({
+    'origin': 'https://unruffled-kare-fa4571.netlify.com',
+    'preflightContinue': true
+    allowedHeaders: [
+        'Refresh-Token',
+        'Content-Type'
+    ]
+}))
