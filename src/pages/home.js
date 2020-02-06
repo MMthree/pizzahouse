@@ -7,7 +7,7 @@ const home = () => {
 
             <div className="col-12 mt-4">
                 <Link to="/menu/pizza">
-                    <img width="100%" src="/images/home/home_hero.jpg" alt="home hero" />
+                    <img width="100%" src="/images/home/home_hero.png" alt="home hero" />
                 </Link>
             </div>
 
@@ -30,7 +30,7 @@ const home = () => {
 
                     <div className="col-6 home-deals-card">
                         <div className=" home-deals-border">
-                            <img src="/images/home/home_deals.jpg" alt="local deals" />
+                            <img src="/images/home/home_deals.png" alt="local deals" />
                             <h5>Local Deals</h5>
                             <p>Delivery or Carryout</p>
                             <Link to="/deals"><button className="my-2 ml-2 btn btn-danger">Order Now</button></Link>
@@ -73,7 +73,7 @@ const home = () => {
                     </div>
 
                     <div className="home-menu-card col-6 col-md-4">
-                        <img src="/images/home/home_menu_drinks.png" alt="home menu" />
+                        <img src="/images/home/home_menu_drinks.jpg" alt="home menu" />
                         <Link to="/menu/drinks"><p>Drinks</p></Link>
                     </div>
                 </div>
