@@ -16,7 +16,7 @@ import {
 const AppNavbar = () => {
 
     const { store } = useContext(YourStoreContext);
-    const { cart, cartTotalCost, cartItemsLength } = useContext(ShoppingCartContext);
+    const { cart, cartTotalCost } = useContext(ShoppingCartContext);
 
 
     const [sideNavToggle, setSideNavToggle] = useState(false);

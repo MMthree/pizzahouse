@@ -2,7 +2,6 @@ import React, { Fragment, useState, useContext } from 'react';
 import { Link } from "react-router-dom";
 import CartItemCard from "../components/CartItemCard";
 import CheckCoupon from "../components/CheckCoupon";
-import PaymentModals from "../components/PaymentModals";
 import { Button, Modal } from 'reactstrap';
 
 import { ShoppingCartContext } from "../context/ShoppingCartContext";
