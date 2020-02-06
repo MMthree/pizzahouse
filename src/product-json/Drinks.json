@@ -4,7 +4,7 @@
         "name": "Pepsi",
         "price": 2.09,
         "cals": "250 cal/bottle",
-        "image": "/images/drinks/drinks_pepsi.png",
+        "image": "/images/drinks/drinks_pepsi.jpg",
         "description": "The bold, refreshing, robust cola."
     },
     {
@@ -12,7 +12,7 @@
         "name": "Diet Pepsi",
         "price": 2.09,
         "cals": "0 cal/bottle",
-        "image": "/images/drinks/drinks_pepsi.png",
+        "image": "/images/drinks/drinks_pepsi.jpg",
         "description": "Light. Crisp. Refreshing. With zero sugar, zero calories, and zero carbs."
     },
     {
@@ -20,7 +20,7 @@
         "name": "Cherry Pepsi",
         "price": 2.09,
         "cals": "260 cals/bottle",
-        "image": "/images/drinks/drinks_cherrypepsi.png",
+        "image": "/images/drinks/drinks_cherrypepsi.jpg",
         "description": "The thrilling burst of unique cherry flavor and a sweet, crisp taste that gives you more to go wild for!"
     },
     {
@@ -28,7 +28,7 @@
         "name": "MTN Dew",
         "price": 2.09,
         "cals": "290 cals/bottle",
-        "image": "/images/drinks/drinks_mtndew.png",
+        "image": "/images/drinks/drinks_mtndew.jpg",
         "description": "Mountain Dew, the original instigator, refreshes with its one of a kind great taste."
     },
     {
@@ -36,7 +36,7 @@
         "name": "Orange Crush",
         "price": 2.09,
         "cals": "270 cals/bottle",
-        "image": "/images/drinks/drinks_orange.png",
+        "image": "/images/drinks/drinks_orange.jpg",
         "description": "Crush Orange sends your taste buds into flavor overdrive with refreshingly juicy orange flavor that is 100% caffeine free."
     },
     {
@@ -44,7 +44,7 @@
         "name": "Sierra Mist",
         "price": 2.09,
         "cals": "240 cals/bottle",
-        "image": "/images/drinks/drinks_sierramist.png",
+        "image": "/images/drinks/drinks_sierramist.jpg",
         "description": "A crisp, refreshing & caffeine free Lemon-Lime flavor soda with real sugar and a splash of real juice."
     }
 ]
