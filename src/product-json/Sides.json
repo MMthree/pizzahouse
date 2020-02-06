@@ -4,7 +4,7 @@
         "name": "Breadsticks",
         "price": 5.99,
         "cals": "137 cals/stick",
-        "image": "/images/sides/sides_breadsticks.png",
+        "image": "/images/sides/sides_breadsticks.jpg",
         "description": "Add to your pasta or pizza order for tasty crispy-on-the-outside, soft-on-the-inside bread sticks."
     },
     {
@@ -12,7 +12,7 @@
         "name": "Cheese Sticks",
         "price": 6.99,
         "cals": "150 cals/stick",
-        "image": "/images/sides/sides_cheesesticks.png",
+        "image": "/images/sides/sides_cheesesticks.jpg",
         "description": "Cheese sticks come sprinkled with flavorful Italian seasoning and a cup of our delicious marinara sauce."
     },
     {
@@ -20,7 +20,7 @@
         "name": "Fries",
         "price": 2.99,
         "cals": "497 cals/order",
-        "image": "/images/sides/sides_fries.png",
+        "image": "/images/sides/sides_fries.jpg",
         "description": "Crispy fries always make a welcome addition to any of our wing meals."
     }
 ]
