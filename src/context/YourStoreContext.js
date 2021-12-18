@@ -42,10 +42,9 @@ export const StoreProvider = props => {
         
         axios.get(url, config)
         .then(res => {
-            console.log(res)
             setStoreLocations(res.data.data.businesses);
         })
-        .catch(err => console.log(err));
+        .catch(err => console.error(err));
     } ;
     
     // Find all nearby stores with zip or address
@@ -56,7 +55,7 @@ export const StoreProvider = props => {
         .then(res => {
             setStoreLocations(res.data.data.businesses);
         })
-        .catch(err => console.log(err));
+        .catch(err => console.error(err));
     };
 
     // Save chosen store address to local storage
