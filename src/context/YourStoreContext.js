@@ -4,7 +4,6 @@ import axios from "axios";
 export const YourStoreContext = createContext();
 
 const apiBase = process.env.REACT_APP_API_BASE
-console.log(apiBase)
 
 export const StoreProvider = props => {
     const [storeLocations, setStoreLocations] = useState([]);
