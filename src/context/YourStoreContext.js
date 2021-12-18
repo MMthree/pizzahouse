@@ -3,6 +3,9 @@ import axios from "axios";
 
 export const YourStoreContext = createContext();
 
+const apiBase = process.env.REACT_APP_API_BASE
+console.log(apiBase)
+
 export const StoreProvider = props => {
     const [storeLocations, setStoreLocations] = useState([]);
     const [store, setStore] = useState({
@@ -36,22 +39,23 @@ export const StoreProvider = props => {
 
     // get coordinates from getLocation function
     const searchWithCoordinates = position => {
-        const url = `https://thingproxy.freeboard.io/fetch/https://api.yelp.com/v3/businesses/search?term=pizzahut&latitude=${position.coords.latitude}&longitude=${position.coords.longitude}&limit=10`;
+        const url = `${apiBase}/businesses?term=pizzahut&latitude=${position.coords.latitude}&longitude=${position.coords.longitude}`;
         
         axios.get(url, config)
         .then(res => {
-            setStoreLocations(res.data.businesses);
+            console.log(res)
+            setStoreLocations(res.data.data.businesses);
         })
         .catch(err => console.log(err));
     } ;
     
     // Find all nearby stores with zip or address
     const findStore = zip => {
-        const url = `https://thingproxy.freeboard.io/fetch/https://api.yelp.com/v3/businesses/search?term=pizzahut&location=${zip}&limit=10`;
+        const url = `${apiBase}/businesses?term=pizzahut&location=${zip}`;
         
         axios.get(url, config)
         .then(res => {
-            setStoreLocations(res.data.businesses);
+            setStoreLocations(res.data.data.businesses);
         })
         .catch(err => console.log(err));
     };
